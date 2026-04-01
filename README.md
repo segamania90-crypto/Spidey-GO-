@@ -6,10 +6,10 @@
 
 ## 🇰🇿 Қазақша
 
-**Spidey GO!** — чиби стильдегі пиксельдік 2D экшн ойын. Сен Spider-Man ретінде қалада жүресің, дұшпандарды паутинамен немесе басына секіру арқылы жеңесің және аман қалуға тырысасың. Ойын менің қызым үшін жасалды! 🩷
+**Spidey GO!** — чиби стильдегі пиксельдік 2D экшн ойын. Сен Spider-Man ретінде қалада жүресің, дұшпандарды паутинамен немесе басына секіру арқылы жеңесің және аман қалуға тырысасың. 
 
-### ⚙️ Ойын мүмкіндіктері
-- 🕷️ Торпен атқылау
+### ⚙️ Ойын мүмкіндіктері:
+- 🕷️ Тормен атқылау
 - 👟 Дұшпан басына секіру арқылы өлтіру
 - ❤️ Жүректерді жинап өмірді қалпына келтіру
 - 👾 5 түрлі дұшпан: Rhino, Scorpion, Shocker, The Lizard, Powler
@@ -36,7 +36,7 @@ git clone https://github.com/segamania90-crypto/spidey-go.git
 
 ## 🇷🇺 Русский
 
-**Spidey GO!** — пиксельный 2D экшн в стиле чиби. Играй за Spider-Man в ночном городе — стреляй паутиной, прыгай на врагов и выживай как можно дольше. Игра была сделана для моей дочери! 🩷
+**Spidey GO!** — пиксельный 2D экшн в стиле чиби. Играй за Spider-Man в ночном городе — стреляй паутиной, прыгай на врагов и выживай как можно дольше.
 
 ### ⚙️ Особенности
 - 🕷️ Стрельба паутиной
@@ -66,7 +66,7 @@ git clone https://github.com/segamania90-crypto/spidey-go.git
 
 ## 🇬🇧 English
 
-**Spidey GO!** is a chibi-style pixel 2D action game. Play as Spider-Man in a neon city — shoot webs, stomp enemies, and survive as long as you can. This game was made for my daughter! 🩷
+**Spidey GO!** is a chibi-style pixel 2D action game. Play as Spider-Man in a neon city — shoot webs, stomp enemies, and survive as long as you can. 
 
 ### ⚙️ Features
 - 🕷️ Web shooting attack
