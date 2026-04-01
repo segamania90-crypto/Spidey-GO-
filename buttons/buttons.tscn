@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://j2kai37q7qnl"]
+
+[ext_resource type="Script" uid="uid://calaug3jecx5" path="res://buttons/hud.gd" id="1_6hvj5"]
+[ext_resource type="Texture2D" uid="uid://bsks8f31ppjsj" path="res://buttons/keyboard_72.png" id="1_ep1kq"]
+[ext_resource type="Texture2D" uid="uid://uesuq8bv8qbs" path="res://buttons/keyboard_73.png" id="2_6hvj5"]
+[ext_resource type="Texture2D" uid="uid://d2hv3yqwiw28h" path="res://buttons/keyboard_124.png" id="3_sjxhy"]
+[ext_resource type="Texture2D" uid="uid://4ededagf18m2" path="res://buttons/keyboard_130.png" id="4_afgwc"]
+[ext_resource type="FontFile" uid="uid://b3lu6g6utx7qt" path="res://buttons/gomarice_soft_atama.ttf" id="6_sjxhy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sjxhy"]
+
+[node name="Buttons" type="CanvasLayer" unique_id=1720591679]
+
+[node name="Control" type="Control" parent="." unique_id=1766516729]
+modulate = Color(0.7585879, 0.78214186, 0.886004, 0.61700004)
+self_modulate = Color(1, 1, 1, 0.97300005)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6hvj5")
+
+[node name="Right" type="Button" parent="Control" unique_id=326430999]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 252.0
+offset_top = 990.0
+offset_right = 292.0
+offset_bottom = 1030.0
+grow_vertical = 0
+keep_pressed_outside = true
+icon = ExtResource("1_ep1kq")
+
+[node name="Left" type="Button" parent="Control" unique_id=167434375]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = 988.0
+offset_right = 89.0
+offset_bottom = 1028.0
+grow_vertical = 0
+keep_pressed_outside = true
+icon = ExtResource("2_6hvj5")
+
+[node name="Attack" type="Button" parent="Control" unique_id=1376400796]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1498.0
+offset_top = 984.0
+offset_right = 1538.0
+offset_bottom = 1024.0
+grow_horizontal = 0
+grow_vertical = 0
+keep_pressed_outside = true
+icon = ExtResource("3_sjxhy")
+
+[node name="Jump" type="Button" parent="Control" unique_id=1933663678]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1825.0
+offset_top = 985.0
+offset_right = 1865.0
+offset_bottom = 1026.0
+grow_horizontal = 0
+grow_vertical = 0
+keep_pressed_outside = true
+icon = ExtResource("4_afgwc")
+
+[node name="HP" type="Label" parent="." unique_id=1409271197 groups=["hp_label"]]
+modulate = Color(0.88030493, 0.106126174, 0.17923622, 1)
+self_modulate = Color(0.983107, 0.106126174, 0, 1)
+offset_left = 68.0
+offset_top = 61.0
+offset_right = 472.0
+offset_bottom = 204.0
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("6_sjxhy")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxTexture_sjxhy")
+text = "HP:100"
+text_overrun_behavior = 5
+uppercase = true

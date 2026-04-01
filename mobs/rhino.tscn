@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://cv1dntyunqshk"]
+
+[ext_resource type="Texture2D" uid="uid://cl6yrf4q6wrb4" path="res://mobs/$Rhino.png" id="1_72v5y"]
+[ext_resource type="Script" uid="uid://m322nuk3dhv2" path="res://mobs/rhino.gd" id="1_spg0b"]
+[ext_resource type="AudioStream" uid="uid://dyc3wb738kaed" path="res://sfx/punch.mp3" id="3_btwgs"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rpuid"]
+radius = 103.0
+height = 340.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kl6i"]
+atlas = ExtResource("1_72v5y")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1sr0"]
+atlas = ExtResource("1_72v5y")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrka1"]
+atlas = ExtResource("1_72v5y")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxeyl"]
+atlas = ExtResource("1_72v5y")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jae1j"]
+atlas = ExtResource("1_72v5y")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d10ub"]
+atlas = ExtResource("1_72v5y")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_okas8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kl6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1sr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrka1")
+}],
+"loop": true,
+"name": &"walk left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxeyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jae1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d10ub")
+}],
+"loop": true,
+"name": &"walk right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_85sga"]
+radius = 134.0
+height = 350.0
+
+[node name="Rhino" type="CharacterBody2D" unique_id=1356690110 groups=["enemies"]]
+script = ExtResource("1_spg0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=641836651]
+position = Vector2(7, 0)
+shape = SubResource("CapsuleShape2D_rpuid")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1987242049 groups=["enemies"]]
+position = Vector2(7, 16)
+scale = Vector2(4.625, 5.40625)
+sprite_frames = SubResource("SpriteFrames_okas8")
+animation = &"walk right"
+frame_progress = 0.35808378
+
+[node name="Affected area" type="Area2D" parent="." unique_id=1614335225]
+collision_mask = 4
+
+[node name="Area hp" type="CollisionShape2D" parent="Affected area" unique_id=2111347599]
+position = Vector2(7, -23)
+shape = SubResource("CapsuleShape2D_85sga")
+debug_color = Color(0.654902, 0.06666667, 0.26666668, 0.41960785)
+metadata/_edit_group_ = true
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1670445264]
+stream = ExtResource("3_btwgs")

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cq8r3rbsbsjak"]
+
+[ext_resource type="Script" uid="uid://dre0vsuulpl4c" path="res://mobs/shocker.gd" id="1_1ghgp"]
+[ext_resource type="Texture2D" uid="uid://cesi7epi3a8ms" path="res://mobs/$Shocker.png" id="1_y2ygi"]
+[ext_resource type="AudioStream" uid="uid://dyc3wb738kaed" path="res://sfx/punch.mp3" id="3_7sopc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ghgp"]
+radius = 45.0
+height = 262.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sopc"]
+atlas = ExtResource("1_y2ygi")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghatx"]
+atlas = ExtResource("1_y2ygi")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix308"]
+atlas = ExtResource("1_y2ygi")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdgs7"]
+atlas = ExtResource("1_y2ygi")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0jrd"]
+atlas = ExtResource("1_y2ygi")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5qg5"]
+atlas = ExtResource("1_y2ygi")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kwkyb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sopc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghatx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix308")
+}],
+"loop": true,
+"name": &"walk left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdgs7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0jrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5qg5")
+}],
+"loop": true,
+"name": &"walk right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8yhg"]
+radius = 76.0
+height = 262.0
+
+[node name="Shocker" type="CharacterBody2D" unique_id=1630012943 groups=["enemies"]]
+script = ExtResource("1_1ghgp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=771002559]
+position = Vector2(-1, 23)
+shape = SubResource("CapsuleShape2D_1ghgp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1379081914 groups=["enemies"]]
+position = Vector2(4, 6)
+scale = Vector2(3.3125002, 5.4166665)
+sprite_frames = SubResource("SpriteFrames_kwkyb")
+animation = &"walk left"
+
+[node name="Affected area" type="Area2D" parent="." unique_id=1506832953]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Affected area" unique_id=215918098]
+position = Vector2(-1, 3)
+shape = SubResource("CapsuleShape2D_x8yhg")
+debug_color = Color(0.97814435, 0.2374612, 0.26006752, 0.721)
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1685747194]
+stream = ExtResource("3_7sopc")

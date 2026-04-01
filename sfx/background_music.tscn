@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bt17t1qcii804"]
+
+[ext_resource type="AudioStream" uid="uid://n360ulqbq0hc" path="res://sfx/mfcc-happy-kids-368018.mp3" id="1_b81m2"]
+[ext_resource type="Script" uid="uid://c7r4v6edj7tii" path="res://sfx/background_music.gd" id="2_y62ob"]
+
+[node name="Background music" type="AudioStreamPlayer" unique_id=1906860803]
+stream = ExtResource("1_b81m2")
+volume_db = -5.0
+autoplay = true
+parameters/looping = true
+script = ExtResource("2_y62ob")

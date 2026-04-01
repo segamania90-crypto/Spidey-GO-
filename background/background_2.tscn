@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dup7orht308qh"]
+
+[ext_resource type="Texture2D" uid="uid://bockhpn6gkih2" path="res://background/sky.png" id="1_3e1nw"]
+[ext_resource type="Texture2D" uid="uid://dermnkkqo6odn" path="res://background/houses3.png" id="2_h8vpw"]
+[ext_resource type="Texture2D" uid="uid://dj2g3o4gkga7g" path="res://background/houded2.png" id="3_ihps1"]
+[ext_resource type="Texture2D" uid="uid://dcsvslsnagquk" path="res://background/houses1.png" id="4_kgnor"]
+[ext_resource type="Texture2D" uid="uid://cocp0j2l122mj" path="res://background/road.png" id="5_3uo60"]
+[ext_resource type="Texture2D" uid="uid://dp5i28aly2rhv" path="res://background/City3.png" id="6_gxbjn"]
+
+[node name="Background 2" type="Node2D" unique_id=307259340]
+
+[node name="Sky_2" type="Sprite2D" parent="." unique_id=1759634808]
+position = Vector2(960, 254.00002)
+scale = Vector2(1, 1.5296296)
+texture = ExtResource("1_3e1nw")
+
+[node name="Houses3_2" type="Sprite2D" parent="." unique_id=1039868786]
+position = Vector2(960, 540)
+texture = ExtResource("2_h8vpw")
+
+[node name="Houded2_2" type="Sprite2D" parent="." unique_id=77624775]
+position = Vector2(960, 540)
+texture = ExtResource("3_ihps1")
+
+[node name="Houses1_2" type="Sprite2D" parent="." unique_id=1797365872]
+position = Vector2(963, 543)
+texture = ExtResource("4_kgnor")
+
+[node name="Road_2" type="Sprite2D" parent="." unique_id=530553011]
+position = Vector2(957.5, 541)
+scale = Vector2(1.0026041, 1)
+texture = ExtResource("5_3uo60")
+
+[node name="Sky1" type="Sprite2D" parent="." unique_id=1918671435]
+position = Vector2(-1229, 250.50003)
+scale = Vector2(1.2802083, 1.5231483)
+texture = ExtResource("1_3e1nw")
+
+[node name="City" type="Sprite2D" parent="." unique_id=184033570]
+position = Vector2(-1229, 540)
+scale = Vector2(1.2802083, 1)
+texture = ExtResource("6_gxbjn")
+
+[node name="Sky_3" type="Sprite2D" parent="." unique_id=1871647964]
+position = Vector2(2880, 256)
+scale = Vector2(1, 1.5277779)
+texture = ExtResource("1_3e1nw")
+
+[node name="Houses3_3" type="Sprite2D" parent="." unique_id=1134038901]
+position = Vector2(2880, 541)
+texture = ExtResource("2_h8vpw")
+
+[node name="Houded2_3" type="Sprite2D" parent="." unique_id=563345150]
+position = Vector2(2880, 540)
+scale = Vector2(1.0010417, 1)
+texture = ExtResource("3_ihps1")
+
+[node name="Houses1_3" type="Sprite2D" parent="." unique_id=421242101]
+position = Vector2(2880, 540)
+texture = ExtResource("4_kgnor")
+
+[node name="Road_3" type="Sprite2D" parent="." unique_id=1066354113]
+position = Vector2(2879, 541)
+texture = ExtResource("5_3uo60")
